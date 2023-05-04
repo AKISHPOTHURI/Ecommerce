@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { email, order } from '../data-types';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -10,7 +11,7 @@ import { email, order } from '../data-types';
 export class CheckoutComponent implements OnInit {
 
   totalPrice: number|undefined
-  constructor(private product: ProductService) { }
+  constructor(private product: ProductService,private fb:FormBuilder) { }
 
   ngOnInit(): void {
     this.product.currentCart().subscribe((result) => {
@@ -24,6 +25,12 @@ export class CheckoutComponent implements OnInit {
       console.warn(this.totalPrice);
     })
   }
+
+  checkOutForm = this.fb.group({
+    email:[''],
+    address:[''],
+    contactDetails:['']
+  });
 
   orderNow(data:{email:string,address:string,contact:string}) {
     let user = localStorage.getItem('user');

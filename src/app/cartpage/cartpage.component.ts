@@ -25,6 +25,10 @@ export class CartpageComponent implements OnInit {
     })
   }
 
+  navigateToCheckout() {
+    this.router.navigate(['checkout'])
+  }
+
   loadDetails(){
     this.product.currentCart().subscribe((result) => {
       this.cartData = result;

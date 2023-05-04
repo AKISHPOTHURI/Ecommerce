@@ -1,15 +1,14 @@
-<div class="checkout">
+<!-- <div class="checkout">
   <h1>Checkout</h1>
   <div class="row">
     <div class="col-sm-7">
       <h3>Add shipping address</h3>
-      <!-- <p class="message-p">Order message</p> -->
       <form
         #orderData="ngForm"
         class="common-form container"
         (ngSubmit)="orderNow(orderData.value)"
       >
-        <div class="container">
+        <div>
           <input
             type="text"
             class="form-input"
@@ -18,7 +17,7 @@
             ngModel
           />
         </div>
-        <div class="container">
+        <div>
           <input
             type="text"
             class="form-input"
@@ -27,7 +26,7 @@
             ngModel
           />
         </div>
-        <div class="container">
+        <div>
           <input
             type="text"
             class="form-input"
@@ -36,14 +35,40 @@
             ngModel
           />
         </div>
-        <div class="container">
-          <button class="form-button">Order Now</button>
-        </div>
-      </form>
+      </form>    
     </div>
     <div class="col-sm-5">
       <h3>Total Amount: {{ totalPrice }}</h3>
       <h4>Payment Method : <b>Pay on delivery</b></h4>
     </div>
   </div>
+</div> -->
+
+<div class="checkout container">
+  <div class="row">
+    <div class="col-sm-7">
+      <h3>Add shipping address</h3>
+      <form [formGroup]="checkOutForm" (ngSubmit)="orderNow(checkOutForm.value)">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" formControlName="email" placeholder="Enter your email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" formControlName="address" placeholder="Enter your address" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Contact Details</label>
+          <input type="text" formControlName="contactDetails" placeholder="Enter your contact details" class="form-control">
+        </div>
+        <div>
+            <button class="btn btn-primary my-1">Order</button>
+        </div>   
+    </form>
+    </div>
+    <div class="col-sm-5">
+      <h3>Total Amount: {{ totalPrice }}</h3>
+      <h4>Payment Method : <b>Pay on delivery</b></h4>
+    </div>
+  </div> 
 </div>
