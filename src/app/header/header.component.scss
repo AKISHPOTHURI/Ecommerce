@@ -1,9 +1,9 @@
-:host ::ng-deep .mx-5{
-    margin-right: 20rem !important;
-}
+// :host ::ng-deep .mx-5{
+//     margin-right: 20rem !important;
+// }
 
-:host ::ng-deep .px-1 {
-    padding-right: 15rem !important;
+:host ::ng-deep .px-3 {
+  font-weight: normal !important;
 }
 
 ::placeholder {
@@ -35,3 +35,124 @@
   .suggested-result {
     list-style-type: none;
   }
+
+/* CSS Code */
+
+/* Basic Code */
+body {
+  font-family: "Open sans",sans-serif;
+  color: blueviolet;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto",sans-serif;
+}
+
+#header {
+  background: #17a2b8;
+  
+}
+
+#header .logo {
+  font-size: 120%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#header .logo a {
+  color: #fff;
+}
+/* navigate menu */
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  display: flex;
+}
+
+.nav-menu ul li {
+  position: relative;
+  float: right;
+  white-space: nowrap;
+  padding: 10px 5px 10px 0px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #e2dede;
+  transition: 0.3s;
+  font-size: 100%;
+  font-weight: 300;
+  font-family: "Roboto",sans-serif;
+  padding: 0 4px;
+  text-transform: uppercase;
+}
+
+.nav-menu ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #1d2122;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.nav-menu a:hover::before,
+.nav-menu li:hover a::before,
+.nav-menu .active a::before {
+  visibility: visible;
+  width: 100%;
+}
+.nav-menu a:hover,
+.nav-menu .active a,
+.nav-menu li:hover a {
+  color: #fff;
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  padding-left: 10%;
+  align-items: center;
+  margin-top: 0.5%;
+}
+
+.search input {
+  border-radius: 5px;
+  width: 450px;
+}
+
+.search button {
+  border-radius: 5px;
+  background-color: #deebf0;
+  color: #706464;
+  // margin-left: 200px;
+}
+
+.search button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+
+.tags {
+  padding-left: 210%;
+  
+}

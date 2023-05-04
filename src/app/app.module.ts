@@ -21,6 +21,8 @@ import { SellerProductUpdateComponent } from './seller-product-update/seller-pro
 import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartpageComponent } from './cartpage/cartpage.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SearchComponent,
     ProductDetailsComponent,
     UserAuthComponent,
+    CartpageComponent,
+    CheckoutComponent,
     
   ],
   imports: [

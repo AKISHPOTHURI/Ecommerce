@@ -9,6 +9,8 @@ import { SellerProductUpdateComponent } from './seller-product-update/seller-pro
 import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartpageComponent } from './cartpage/cartpage.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path:'sellerproductupdate/:id', component:SellerProductUpdateComponent, canActivate:[AuthGuard]},
   {path:'search/:query', component:SearchComponent},
   {path:'details/:productId', component:ProductDetailsComponent},
-  {path:'userauth', component:UserAuthComponent}
+  {path:'userauth', component:UserAuthComponent},
+  {path:'cart', component:CartpageComponent},
+  {path:'checkout', component:CheckoutComponent}
 ];
 
 @NgModule({
@@ -27,4 +31,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [HomeComponent,SellerLoginComponent,SellerAddProductComponent,
-  SellerProductUpdateComponent,ProductDetailsComponent,UserAuthComponent]
+  SellerProductUpdateComponent,ProductDetailsComponent,UserAuthComponent, CartpageComponent,
+  CheckoutComponent]

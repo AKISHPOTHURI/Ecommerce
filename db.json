@@ -139,78 +139,56 @@
       "userId": 4,
       "productId": 3,
       "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "email": "bruce@gmail.com",
+      "address": "Telangana",
+      "contact": "7841916516",
+      "totalPrice": 222100,
+      "userId": 4,
+      "id": 1
     },
     {
-      "productName": "Pexpo bottle",
-      "productPrice": "850",
-      "productColor": "red",
-      "productCategory": "Utilities",
-      "productDescription": "1L Office and gym use.",
-      "productImageUrl": "https://th.bing.com/th?id=OIP.6kHs-uTHcgTcuncxp0loYAHaIq&w=231&h=270&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 1,
+      "email": "peter@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 222100,
       "userId": 4,
-      "productId": 7,
+      "id": 2
+    },
+    {
+      "email": "peter@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 222100,
+      "userId": 4,
       "id": 3
     },
     {
-      "productName": "half kurtha ",
-      "productPrice": "1000",
-      "productColor": "silver",
-      "productCategory": "Ethinic",
-      "productDescription": "manufactured using cotton. ",
-      "productImageUrl": "https://th.bing.com/th?id=OIP.sgOTJ8K1qxRc8Q-Rdk_TAAHaJ1&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 1,
+      "email": "asc@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 222100,
       "userId": 4,
-      "productId": 4,
       "id": 4
     },
     {
-      "productName": "half kurtha ",
-      "productPrice": "1000",
-      "productColor": "silver",
-      "productCategory": "Ethinic",
-      "productDescription": "manufactured using cotton. ",
-      "productImageUrl": "https://th.bing.com/th?id=OIP.sgOTJ8K1qxRc8Q-Rdk_TAAHaJ1&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 1,
+      "email": "arun@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 222100,
       "userId": 4,
-      "productId": 4,
       "id": 5
     },
     {
-      "productName": "DEll vastro",
-      "productPrice": "55500",
-      "productColor": "Black",
-      "productCategory": "Laptop",
-      "productDescription": "Core i3, Ram 8 gb, 512 ssd.",
-      "productImageUrl": "https://www.bing.com/th?id=OIP.6ECBph0i4QdKIE2y5znzOwHaE1&w=174&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 1,
+      "email": "akash@gmail.com",
+      "address": "",
+      "contact": "",
+      "totalPrice": 222100,
       "userId": 4,
-      "productId": 3,
       "id": 6
-    },
-    {
-      "productName": "Bag ",
-      "productPrice": "880",
-      "productColor": "brown ",
-      "productCategory": "Bags",
-      "productDescription": "leather bag",
-      "productImageUrl": "https://www.bing.com/th?id=OIP.KLtb9qzMVYmGRICVAD9tnwHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 4,
-      "productId": 5,
-      "userId": 4,
-      "id": 7
-    },
-    {
-      "productName": "half kurtha ",
-      "productPrice": "1000",
-      "productColor": "silver",
-      "productCategory": "Ethinic",
-      "productDescription": "manufactured using cotton. ",
-      "productImageUrl": "https://th.bing.com/th?id=OIP.sgOTJ8K1qxRc8Q-Rdk_TAAHaJ1&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
-      "quantity": 1,
-      "productId": 4,
-      "userId": 4,
-      "id": 8
     }
   ]
 }

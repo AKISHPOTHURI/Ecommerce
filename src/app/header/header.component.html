@@ -1,4 +1,4 @@
-<div class="bg-info">
+<!-- <div class="bg-info">
     <nav class="navbar navbar-expand mx-2">
         <div class="navbar-collapse">
             <a routerLink="/" class="navbar-brand">ECOM</a>
@@ -9,7 +9,7 @@
             </ul>
         </div>
         <div *ngIf="menuType==='default'" class="mx-5">
-            <form class="">
+            <form>
                 <input #searchInput class="px-1" type="text" placeholder="search for the products" (keyup)="searchProduct($event)" (blur)="hideSearch()">
                 <button class="" (click)="search(searchInput.value)">search</button>
                 <ul class="suggested-result" *ngIf="searchResult">
@@ -28,7 +28,7 @@
                     <a class="nav-link" routerLink="userauth">Login/Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart({{cartItems}})</a>
+                    <a class="nav-link" routerLink="cart">Cart({{cartItems}})</a>
                 </li>
             </ul>
             <ul *ngSwitchCase="'seller'" class="navbar-nav">
@@ -46,14 +46,11 @@
                 </li>
             </ul>
             <ul *ngSwitchCase="'user'" class="navbar-nav">
-                <!-- <li class="nav-item">
-                    <a class="nav-link" routerLink="sellerhome">Product List</a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" routerLink="sellerlogin">Seller Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart({{cartItems}})</a>
+                    <a class="nav-link" routerLink="cart">Cart({{cartItems}})</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" (click)="userLogOut()" routerLink="">Sign Out</a>
@@ -64,4 +61,45 @@
             </ul>
         </div>
       </nav>
-</div>
+</div> -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+        <h1 class="logo mr-auto"><a routerLink="/">Ecommerce</a></h1>
+        <h4 class="logo mr-auto px-3"><a routerLink="/">Home</a></h4>
+        <nav class="nav-menu d-none d-lg-block">
+            <div *ngIf="menuType==='default'" class="search">
+                <form>
+                    <div>
+                        <input #searchInput type="text" placeholder="search for the products" (keyup)="searchProduct($event)" (blur)="hideSearch()">
+                        <button class="search-btn" (click)="search(searchInput.value)">search</button>
+                    </div>
+
+                    <ul class="suggested-result" *ngIf="searchResult">
+                        <li *ngFor="let item of searchResult">
+                            <a (mousedown)="redirectToDetails(item.id)">{{item.productName}}</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div [ngSwitch]="menuType" class="tags">
+                <ul *ngSwitchCase="'default'">
+                    <li><a routerLink="sellerlogin">Seller Login</a></li>
+                    <li><a routerLink="userauth">Login/Sign Up</a></li>
+                    <li><a routerLink="cart">Cart({{cartItems}})</a></li>
+                </ul>
+                <ul *ngSwitchCase="'seller'">
+                    <li><a routerLink="sellerhome">Product List</a></li>
+                    <li><a routerLink="selleraddproduct">Add Product</a></li>
+                    <li><a (click)="logout()">Sign Out</a></li>
+                    <li><a href="">{{sellerName | titlecase }}</a></li>
+                </ul>
+                <ul *ngSwitchCase="'user'">
+                    <li><a routerLink="sellerlogin">Seller Login</a></li>
+                    <li><a routerLink="cart">Cart({{cartItems}})</a></li>
+                    <li><a (click)="userLogOut()">Sign Out</a></li>
+                    <li><a href="">{{userName | titlecase }}</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
