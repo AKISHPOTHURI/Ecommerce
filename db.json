@@ -139,6 +139,42 @@
       "userId": 4,
       "productId": 3,
       "id": 2
+    },
+    {
+      "productName": "realme GT Neo 3t",
+      "productPrice": "27000",
+      "productColor": "black",
+      "productCategory": "Electronics",
+      "productDescription": "This is the good phone",
+      "productImageUrl": "https://www.bing.com/th?id=OIP.N3deKVkTVrg4KxE4QyGF6wHaD4&w=180&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      "quantity": 1,
+      "userId": 4,
+      "productId": 2,
+      "id": 3
+    },
+    {
+      "productName": "DEll vastro",
+      "productPrice": "55500",
+      "productColor": "Black",
+      "productCategory": "Laptop",
+      "productDescription": "Core i3, Ram 8 gb, 512 ssd.",
+      "productImageUrl": "https://www.bing.com/th?id=OIP.6ECBph0i4QdKIE2y5znzOwHaE1&w=174&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "productName": "half kurtha ",
+      "productPrice": "1000",
+      "productColor": "silver",
+      "productCategory": "Ethinic",
+      "productDescription": "manufactured using cotton. ",
+      "productImageUrl": "https://th.bing.com/th?id=OIP.sgOTJ8K1qxRc8Q-Rdk_TAAHaJ1&w=216&h=288&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2",
+      "quantity": 1,
+      "userId": 4,
+      "productId": 4,
+      "id": 5
     }
   ],
   "orders": [
@@ -205,6 +241,22 @@
       "totalPrice": 222100,
       "userId": 4,
       "id": 8
+    },
+    {
+      "email": "mohammedshoaib68049@gmail.com",
+      "address": " fkpocdpo",
+      "contactDetails": "7896541230",
+      "totalPrice": 222100,
+      "userId": 4,
+      "id": 9
+    },
+    {
+      "email": "sravani3218@gmail.com",
+      "address": " fkpocdpo",
+      "contactDetails": "7896541230",
+      "totalPrice": 222100,
+      "userId": 4,
+      "id": 10
     }
   ]
 }

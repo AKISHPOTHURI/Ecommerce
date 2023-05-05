@@ -20,9 +20,12 @@ export class CartpageComponent implements OnInit {
   constructor(private product:ProductService, private router: Router) { }
 
   ngOnInit(): void {
-    this.product.currentCart().subscribe((result) => {
-      this.loadDetails();
-    })
+    let user = localStorage.getItem('user')
+    if (user) {
+      this.product.currentCart().subscribe((result) => {
+        this.loadDetails();
+      })
+    }
   }
 
   navigateToCheckout() {

@@ -44,11 +44,13 @@ export class HeaderComponent implements OnInit {
       console.log(this.cartItems)
     }
     
-    this.product.cartData.subscribe((items) => {
-      this.cartItems = items.length;
-      console.log(this.cartItems)
-    })
- 
+    let user = localStorage.getItem('user')
+    if (user){
+      this.product.currentCart().subscribe((items) => {
+        this.cartItems = items.length;
+        console.log(this.cartItems)
+      })
+    }
   }
   
 
