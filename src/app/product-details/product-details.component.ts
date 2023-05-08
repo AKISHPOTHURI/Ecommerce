@@ -48,6 +48,7 @@ export class ProductDetailsComponent implements OnInit {
 
     })
     console.log(this.removeCart);
+    this.addToCart();
   }
 
   handleQuantity(val:string){
@@ -60,6 +61,7 @@ export class ProductDetailsComponent implements OnInit {
 
   addToCart() {
     if(this.productData){
+      debugger;
       this.productData.quantity = this.productQuantity;
       console.log("productQuantity:", this.productData.quantity)
       if(!localStorage.getItem('user')) {
