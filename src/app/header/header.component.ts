@@ -21,17 +21,18 @@ export class HeaderComponent implements OnInit {
     this.router.events.subscribe((val:any)=>{
       if(val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')){
-          this.menuType = "seller"
           if (localStorage.getItem('seller')){
             let sellerStore = localStorage.getItem('seller');
             let sellerData =sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData.userName
+            this.sellerName = sellerData.name;
+            this.menuType = 'seller';
           }
         }else if (localStorage.getItem('user')) {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
-          this.userName = userData.userName;
+          this.userName = userData.name;
           this.menuType = 'user';
+          this.product.getCartList(userData.id);
         }else{
           this.menuType='default'
         }
@@ -43,14 +44,17 @@ export class HeaderComponent implements OnInit {
       this.cartItems = JSON.parse(cartData).length;
       console.log(this.cartItems)
     }
+    this.product.cartData.subscribe((items)=>{ 
+      this.cartItems= items.length 
+    })
     
-    let user = localStorage.getItem('user')
-    if (user){
-      this.product.currentCart().subscribe((items) => {
-        this.cartItems = items.length;
-        console.log(this.cartItems)
-      })
-    }
+    // let user = localStorage.getItem('user')
+    // if (user){
+    //   this.product.currentCart().subscribe((items) => {
+    //     this.cartItems = items.length;
+    //     console.log(this.cartItems)
+    //   })
+    // }
   }
   
 

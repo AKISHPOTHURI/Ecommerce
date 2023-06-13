@@ -5,3 +5,9 @@
 button:disabled {
     cursor:not-allowed;
 }
+
+@media screen and (max-width: 580px) {
+    :host ::ng-deep .form-group input {
+    width: 20em !important;
+    }
+}

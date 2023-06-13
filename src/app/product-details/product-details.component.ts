@@ -48,7 +48,6 @@ export class ProductDetailsComponent implements OnInit {
 
     })
     console.log(this.removeCart);
-    this.addToCart();
   }
 
   handleQuantity(val:string){
@@ -79,6 +78,7 @@ export class ProductDetailsComponent implements OnInit {
         delete cartData.id;
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
+            this.product.getCartList(userId);
             this.removeCart = true;
           }
         });

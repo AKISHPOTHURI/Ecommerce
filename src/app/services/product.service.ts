@@ -93,6 +93,6 @@ export class ProductService {
   }
 
   email(data:email) {
-    return this.http.post('http://localhost:43359/api/Notification',data)
+    return this.http.post('http://localhost:43359/api/Notification',data,{responseType:'text'})
   }
 }
