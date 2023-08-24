@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
@@ -11,6 +12,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartpageComponent } from './cartpage/cartpage.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path:'details/:productId', component:ProductDetailsComponent},
   {path:'userauth', component:UserAuthComponent},
   {path:'cart', component:CartpageComponent},
-  {path:'checkout', component:CheckoutComponent}
+  {path:'checkout', component:CheckoutComponent},
+  {path:'**',component:NotFoundComponent}
 ];
 
 @NgModule({
@@ -30,6 +33,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent,SellerLoginComponent,SellerAddProductComponent,
-  SellerProductUpdateComponent,ProductDetailsComponent,UserAuthComponent, CartpageComponent,
-  CheckoutComponent]
+// export const routingComponents = [HomeComponent,SellerLoginComponent,SellerAddProductComponent,
+//   SellerProductUpdateComponent,ProductDetailsComponent,UserAuthComponent, CartpageComponent,
+//   CheckoutComponent]

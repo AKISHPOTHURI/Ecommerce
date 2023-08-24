@@ -23,6 +23,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartpageComponent } from './cartpage/cartpage.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     UserAuthComponent,
     CartpageComponent,
     CheckoutComponent,
+    NotFoundComponent,
     
   ],
   imports: [
